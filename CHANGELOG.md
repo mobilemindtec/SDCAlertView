@@ -1,5 +1,46 @@
 # CHANGELOG
 
+### 7.1.1
+**Bug fixes**:
+- Fixes a retain cycle when adding text fields to the alert
+- Properly makes the first text field the first responder when presenting an
+  alert with text fields
+
+## 7.1
+**What's New:**
+- Makes `AlertVisualStyle` subclassable again
+- Adds support for custom background colors in action sheets
+- Adds Taptic feedback when dragging between buttons on iPhone 7
+
+**Bug Fixes:**
+- The dismissal animation looks like the system one again
+- Action sheets without an explicit cancel button won't show the inferred cancel button twice anymore
+- Button labels size and truncate as expected now, instead of being cut off
+
+### 7.0.1
+**Bug Fixes:**
+- Avoids an infinite loop/crash when using an action sheet without explicit cancel buttons
+
+# 7.0
+This is a compatibility update for Swift 3.
+
+**Bug Fixes:**
+- Correctly calls the cancel button's handler in action sheets
+
+# 6.0
+This is a compatibility update for Swift 2.3.
+
+### 5.1.1
+**Bug Fixes:**
+- Gives action buttons the button trait for Voice Over
+
+## 5.1
+**Bug Fixes:**
+- Fixes the inability to override visual style properties in a subclass of `DefaultVisualStyle`. The `VisualStyle` protocol has been removed and the conforming class been renamed to `AlertVisualStyle`. The old class name is still available, but marked as deprecated and will be removed in the future.
+
+**What's New:**
+- Makes an `AlertAction`'s `handler` public.
+
 # 5.0
 5.0 is a compatibility update so the project builds in Swift 2.2 and doesn't generate warnings. It also changes the Objective-C names of the public enums, which Swift now supports.
 
