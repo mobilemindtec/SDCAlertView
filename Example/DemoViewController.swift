@@ -43,7 +43,7 @@ final class DemoViewController: UITableViewController {
                 alert.add(AlertAction(title: "Button \(i)", style: .normal))
             }
         }
-
+        
         alert.actionLayout = ActionLayout(rawValue: self.buttonLayoutControl.selectedSegmentIndex)!
 
         if #available(iOS 9, *) {
